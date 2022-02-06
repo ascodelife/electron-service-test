@@ -1,5 +1,6 @@
 import { app } from 'electron';
 import Runtime, { winService } from '@modern-js/runtime/electron-main';
+import * as services from './services';
 
 const runtime = new Runtime({
   windowsConfig: [
@@ -8,7 +9,7 @@ const runtime = new Runtime({
     },
   ],
   mainServices: {
-    test: () => 'hello, modern js electron',
+    mainServices: services,
   },
 });
 

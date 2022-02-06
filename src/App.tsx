@@ -1,6 +1,9 @@
 import { Switch, Route } from '@modern-js/runtime/router';
+import { callMain } from '@modern-js/runtime/electron-render';
 
 import './App.css';
+
+callMain('openWindow', 'demo');
 
 const App = () => (
   <Switch>
